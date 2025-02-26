@@ -1,0 +1,36 @@
+.main{
+    display: flex;
+    margin: 3rem;
+
+    img{
+        width: 45rem;
+        height: 15rem ;
+        margin-right: 2rem;
+    }
+    .left{
+        width: 50%;
+        padding: 1rem;
+        color: rgb(32, 16, 2) ;
+        h1{
+            font-size: 315%;
+            margin-bottom: 1rem;
+        }
+        p{
+            width: 30rem;
+            margin-bottom: 1rem;
+            font-size: 115%;
+        }
+    
+        a{
+            border: 1px solid rgb(238, 119, 15);
+            border-radius: 10px;
+            background-color: aliceblue;
+            padding: 0.5rem ;
+            margin: 3rem 2rem  0 0;
+            text-decoration: none;
+            color: rgb(32, 16, 2) ;
+            font-size:  1.5rem;
+
+        }
+    }
+}
