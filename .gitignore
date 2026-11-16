@@ -22,4 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-node_modules/
+# Vite cache and env files
+.vite/
+.env
+.env.*
+!.env.example
