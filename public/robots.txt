@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://codelady-ship.github.io/exam-task-react/sitemap.xml

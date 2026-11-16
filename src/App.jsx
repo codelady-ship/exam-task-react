@@ -1,16 +1,18 @@
-import React from 'react';
-import Header from './komponents/header';  
+import Header from './komponents/Header';
 import Middle from './komponents/Middle';
+import Sections from './komponents/Sections';
 import Footer from './komponents/Footer';
 import './assets/styles.css';
-const App = () => {
-  return (
-    <div>
-      <Header />
+
+const App = () => (
+  <>
+    <Header />
+    <main>
       <Middle />
-      <Footer />
-    </div>
-  );
-}
+      <Sections />
+    </main>
+    <Footer />
+  </>
+);
 
 export default App;

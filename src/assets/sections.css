@@ -1,0 +1,157 @@
+.section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.section-lead {
+  max-width: 48rem;
+  font-size: 1.1rem;
+  color: var(--muted);
+}
+
+/* Service cards */
+.container {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.item {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: center;
+  background-color: var(--card);
+  border-radius: 10px;
+  border: 1px solid var(--orange);
+  color: var(--orange);
+}
+
+.item h3 {
+  color: var(--text);
+}
+
+.item p {
+  color: var(--muted);
+}
+
+/* Features */
+.feature-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.feature-list li {
+  padding: 1rem 1rem 1rem 2.5rem;
+  position: relative;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.feature-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 1rem;
+  color: var(--orange);
+  font-weight: 800;
+}
+
+/* Pricing */
+.plans {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  max-width: 760px;
+}
+
+.plan {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  background: #fff;
+  border: 1px solid var(--orange);
+  border-radius: 12px;
+}
+
+.plan-price {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--orange-dark);
+}
+
+.plan-note {
+  color: var(--muted);
+}
+
+.plan ul {
+  padding-left: 1.2rem;
+  margin-bottom: 1rem;
+  flex: 1;
+}
+
+.plan .btn {
+  align-self: flex-start;
+}
+
+/* Contact form */
+.contact-form {
+  margin-top: 1.5rem;
+  max-width: 560px;
+  display: grid;
+  gap: 1rem;
+}
+
+.field label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #b9a99c;
+  border-radius: 8px;
+  font: inherit;
+  background: #fff;
+}
+
+.field [aria-invalid='true'] {
+  border-color: #b00020;
+}
+
+.field-error {
+  margin-top: 0.25rem;
+  color: #b00020;
+  font-size: 0.9rem;
+}
+
+.contact-form .btn {
+  justify-self: start;
+}
+
+.form-status {
+  color: #1f6f2a;
+  font-weight: 700;
+  min-height: 1.5em;
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 2rem 1rem;
+  }
+}

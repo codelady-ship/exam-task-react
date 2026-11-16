@@ -1,33 +1,37 @@
-import React from 'react';
+import { useState } from 'react';
 import '../assets/header.css';
+import { navLinks } from './navLinks';
+
+const BASE = import.meta.env.BASE_URL;
+
 const Header = () => {
-  function dropdown() {
-    document.querySelector('.contact-dropdown').classList.toggle('active');
-  }
-  function menu(){
-    document.querySelector('.links').classList.toggle('active');
-  }
+  const [open, setOpen] = useState(false);
+  const close = () => setOpen(false);
+
   return (
-    <div className="head">
-      <img src="./vite.svg" alt="logo" />
-      <div className="links">
-        <a href="#">HOME</a>
-        <a href="#">ABOUT</a>
-        <a href="#">SERVICES</a>
-        <a href="#">FEATURES</a>
-        <section className="contact-dropdown" onClick={dropdown}>
-          <div className='contact'>Contact us <img src="emoji.png" alt="emoji"/></div>
-          <ul className="dropdown-menu">
-            <li><a href="tel:+1234567890">Phone</a></li>
-            <li><a href="mailto:example@example.com">Email</a></li>
-            <li><a href="https://t.me/username" target="_blank">Telegram</a></li>
-            <li><a href="https://instagram.com/username" target="_blank">Instagram</a></li>
-          </ul>
-        </section>
-        <a href="#">PRICING</a>
-      </div>
-      <img src="public/image.png" alt="icon-menu" className='menu' onClick={menu}/>
-    </div>
+    <header className="head">
+      <a href="#home" className="brand" onClick={close}>
+        <img src={`${BASE}logo.svg`} alt="" width="40" height="40" />
+        <span>Start Up</span>
+      </a>
+      <button
+        type="button"
+        className="menu"
+        aria-label={open ? 'Close menu' : 'Open menu'}
+        aria-expanded={open}
+        aria-controls="main-nav"
+        onClick={() => setOpen((v) => !v)}
+      >
+        <img src={`${BASE}image.png`} alt="" width="32" height="32" />
+      </button>
+      <nav id="main-nav" aria-label="Main" className={`links${open ? ' active' : ''}`}>
+        {navLinks.map(({ href, label }) => (
+          <a key={href} href={href} onClick={close}>
+            {label}
+          </a>
+        ))}
+      </nav>
+    </header>
   );
 };
 
