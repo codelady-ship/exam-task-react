@@ -1,26 +1,18 @@
-import React from 'react'
 import '../assets/footer.css';
-const Footer = () => {
-  return (
-    <div className='container'>
-      <div className='item'>
-        <img src="public/vite.svg" alt="" />
-        <p>Lorem ipsum dolor sit amet consectetuassumenda enim natus iure repellat rem alias nobis cum doloremque aspernatur, fugiat expedita ipsum delectus?</p>
-      </div>
-      <div className='item'>
-        <img src="public/vite.svg" alt="" />
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem pariatrem alias nobis cum doloremque aspernatur, fugiat expedita ipsum delectus?</p>
-      </div>
-      <div className='item'>
-        <img src="public/vite.svg" alt="" />
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem palat rem alias nobis cum doloremque aspernatur, fugiat expedita ipsum delectus?</p>
-      </div>
-      <div className='item'>
-        <img src="public/vite.svg" alt="" />
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem rem alias nobis cum doloremque aspernatur, fugiat expedita ipsum delectus?</p>
-      </div>
-    </div>
-  )
-}
+import { navLinks } from './navLinks';
 
-export default Footer
+const Footer = () => (
+  <footer className="footer">
+    <nav aria-label="Footer" className="footer-links">
+      {navLinks.map(({ href, label }) => (
+        <a key={href} href={href}>{label}</a>
+      ))}
+    </nav>
+    <p>
+      © {new Date().getFullYear()} Start Up · A demo landing page built with React as a practice project.{' '}
+      <a href="https://github.com/codelady-ship/exam-task-react" target="_blank" rel="noreferrer">Source on GitHub</a>
+    </p>
+  </footer>
+);
+
+export default Footer;
